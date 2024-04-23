@@ -1,10 +1,9 @@
-//import axios from 'axios';
-
-//or additionController
-describe('GET /arithmetic/addition/?nums=x,y', () => {
+describe('addition controller', () => {
   it('should return sum of nums', async () => {
-    //const res = await request.get('http://localhost:3000/arithmetic/addition/?nums=0,1');
+    const res = await fetch('http://localhost:3000/arithmetic/addition/?nums=0,1')
+    const resJson = await res.json();
 
-    //expect(res.status).toEqual(200);
+    expect(res.status).toBe(200);
+    expect(resJson.i).toBe(1);
   });
 });
