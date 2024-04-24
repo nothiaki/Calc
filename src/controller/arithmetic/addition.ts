@@ -10,8 +10,15 @@ export async function addition(req: Request, res: Response) {
     });
   };
 
-  let i = 0;
-  const nums = numsQuery.split(',').map(Number);
+  const nums: number[] = numsQuery.split(',').map(Number);
+
+  if (nums.some(Number.isNaN)) {
+    return res.status(400).json({
+      message: 'only numbers is allowed in params'
+    });
+  };
+
+  let i: number = 0;
   nums.map(n => i += n);
 
   return res.status(200).json({ i });
