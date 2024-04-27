@@ -8,7 +8,7 @@ Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labor
 
 - [x] Addition
 - [x] Subtraction
-- [ ] Multiplication
+- [x] Multiplication
 - [ ] Division
 - [ ] Exponentiation
 - [ ] Root
